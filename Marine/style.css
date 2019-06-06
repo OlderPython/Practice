@@ -752,6 +752,76 @@ body {
 	border-bottom: 1px solid rgba(201,201,201,1);
 	color: skyblue;
 }
+/*---Search---*/
+.search {
+	float: right;
+	height: 30px;
+	width: 30px;
+	margin-top: 10px;
+}
+.overlay {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    display: none;
+    position: fixed;
+    cursor: default;
+}
+.overlay:target {
+    display: block;
+}
+.popup input::-webkit-input-placeholder {
+	color: grey; 
+}
+.popup input {
+	float: left;
+	color: black; 
+	background: white;
+	width: 185px;
+	height: 48px;
+	border: 0;
+	margin-top: 15px;	
+	padding-left: 15px;
+}
+.popup button {
+	float: right;
+	background: rgba(0,0,0,0);
+	width: 50px;
+	height: 50px;
+	border: 0;
+	margin-top: 15px;
+	background-image: url(images/loupe_white.png);	
+}
+.popup {
+	float: right;
+    top: -100%;
+    left: 1155px;
+    font-size: 14px;
+    z-index: 20;
+    margin: 0;
+    height: 65px;
+	width: 250px;
+	background-image: url(images/search_background.png);
+    position: absolute;
+    font: Calibri;
+    -webkit-transform: translate(-50%, -500%);
+    -ms-transform: translate(-50%, -500%);
+    -o-transform: translate(-50%, -500%);
+    transform: translate(-50%, -500%);
+    -webkit-transition: -webkit-transform 0.5s ease-out;
+    -moz-transition: -moz-transform 0.5s ease-out;
+    -o-transition: -o-transform 0.5s ease-out;
+    transition: transform 0.5s ease-out;
+}
+.overlay:target+.popup {
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    top: 35px;
+}
 /*---First_Slider---*/
 #slides article { 
 	width: 20%;
